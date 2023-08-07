@@ -36,6 +36,14 @@
     "npm install @mui/material @mui/styled-engine-sc styled-components": {
       "name": "npm install @mui/material @mui/styled-engine-sc styled-components",
       "command": "npm install @mui/material @mui/styled-engine-sc styled-components"
+    },
+    "npm install @headlessui/react": {
+      "name": "npm install @headlessui/react",
+      "command": "npm install @headlessui/react"
+    },
+    "npm i @heroicons/react": {
+      "name": "npm i @heroicons/react",
+      "command": "npm i @heroicons/react"
     }
   }
 }
