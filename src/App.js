@@ -38,20 +38,23 @@ export default function App() {
   if (loading) {
     return (
       <div className="App">
-        <h1>{data?.visibility}</h1>
-        <h1>{childData}</h1>
         <Autosearch handleCallback={callback} />
         <h1>Loading...</h1>
       </div>
     );
   }
-
   return (
     <div className="App">
       <Autosearch handleCallback={callback} />
-      <h1>Today's weather in {data?.name}</h1>
-      <h2>{data?.visibility}</h2>
-      <h2>{data?.weather[0]?.description}</h2>
+      {data ? (
+        <div>
+          <h1>Today's weather in {data?.name}</h1>
+          <h2>visibility: {data?.visibility}</h2>
+          <h2>weather: {data?.weather[0]?.description}</h2>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
