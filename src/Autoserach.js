@@ -104,7 +104,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
 export default function CountrySelect(props) {
-  const [value, setValue] = React.useState("choose city");
+  const [value, setValue] = React.useState("");
   const handleClick = (e) => {
     e.preventDefault();
     props.handleCallback(value);
@@ -123,18 +123,20 @@ export default function CountrySelect(props) {
           sx={{ width: 300 }}
           options={countries}
           autoHighlight
-          getOptionLabel={(option) => option.label}
-          value={value}
+          getOptionLabel={(option) => option?.label}
+          //   value={value}
           onChange={(event, newValue) => {
-            setValue(newValue.label);
+            event.preventDefault();
+            setValue(newValue?.label);
           }}
           renderOption={(props, option) => (
             <Box
+              label="Choose a city"
               component="li"
               sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
               {...props}
             >
-              {option.label}
+              {option?.label}
             </Box>
           )}
           renderInput={(params) => (

@@ -44,6 +44,18 @@
     "npm i @heroicons/react": {
       "name": "npm i @heroicons/react",
       "command": "npm i @heroicons/react"
+    },
+    "@mui/material/TextField": {
+      "name": "@mui/material/TextField",
+      "command": "@mui/material/TextField"
+    },
+    "@mui/material/Button": {
+      "name": "@mui/material/Button",
+      "command": "@mui/material/Button"
+    },
+    "@mui/material/Stack": {
+      "name": "@mui/material/Stack",
+      "command": "@mui/material/Stack"
     }
   }
 }
